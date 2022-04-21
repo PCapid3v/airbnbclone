@@ -1,4 +1,5 @@
-export default [
+
+export const data = [
     {
         id: 1,
         title: "Life Lessons with Katie Zaferes",
@@ -10,7 +11,7 @@ export default [
             reviewCount: 6
         },
         location: "Online",
-        openSpots: 0,
+        openSpots: 0
     },
     {
         id: 2,
@@ -23,7 +24,7 @@ export default [
             reviewCount: 30
         },
         location: "Online",
-        openSpots: 27,
+        openSpots: 27
     },
     {
         id: 3,
@@ -36,6 +37,6 @@ export default [
             reviewCount: 2
         },
         location: "Norway",
-        openSpots: 3,
+        openSpots: 3
     }
 ]

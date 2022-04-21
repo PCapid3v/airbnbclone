@@ -1,6 +1,6 @@
 import React from "react"
 import star from "../images/star.png"
-import pictures from "../images/katie-zaferes.png"
+
 export default function Card(props) {
     let badgeText
     if (props.openSpots === 0) {
@@ -8,7 +8,7 @@ export default function Card(props) {
     } else if (props.location === "Online") {
         badgeText = "ONLINE"
     }
-    //need to fix the images
+    console.log(props.coverImg);
     return (
         <div className="card">
             {
@@ -16,11 +16,12 @@ export default function Card(props) {
                 <div className="card--badge">{badgeText}</div>
             }            
             <img 
-                src={pictures}
+                src={require(`../images/${props.coverImg}`)}
                 className="card--image" 
+                alt={props.title}
             />
             <div className="card--stats">
-                <img src={star} className="card--star"  />
+                <img src={star} className="card--star" alt="star badge" />
                 <span>{props.stats.rating}</span>
                 <span className="gray">({props.stats.reviewCount}) • </span>
                 <span className="gray">{props.location}</span>
